@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import RelicProCanonic from 'next/font/local';
+import RelicProDemotic from 'next/font/local';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,6 +13,16 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const relicCanonic = RelicProCanonic({
+  src: '../../public/fonts/RelicProCanonic.woff2',
+  variable: '--font-relic-c',
+})
+
+const relicDemotic = RelicProDemotic({
+  src: '../../public/fonts/RelicProDemotic.woff2',
+  variable: '--font-relic-d',
+})
 
 export const metadata: Metadata = {
   title: "DND newbie character creator",
@@ -25,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${relicCanonic.variable} ${relicDemotic.variable} antialiased`}
       >
         {children}
       </body>

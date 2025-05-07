@@ -7,7 +7,7 @@ export const NavLink = (props: NavLinkProps) => {
   return (
     <NavigationMenuLink 
       href={link}
-      className="text-white transition-all hover:shadow-md hover:shadow-accent md:px-8 rounded-lg"
+      className="bg-transparent border-transparent border-1 hover:bg-transparent px-4 rounded-2xl text-lavender transition-all hover:border-1 hover:shadow-lemon hover:border-lemon hover:shadow-sm hover:text-lemon md:px-8"
     >
       {children}
     </NavigationMenuLink>

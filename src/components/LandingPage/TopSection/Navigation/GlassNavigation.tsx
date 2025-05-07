@@ -6,10 +6,10 @@ import {
 
 import { NavLink } from '@/components/ui/NavLink/NavLink';
 
-export const GlassNavigationMenu = () => {
+export const GlassNavigation = () => {
   return (
-    <div className="sticky">
-      <NavigationMenu className="rounded-2xl bg-white/5 backdrop-blur-sm shadow-lg px-6 py-3">
+    <div className="sticky top-0">
+      <NavigationMenu className="rounded-4xl bg-white/5 backdrop-blur-xs px-6 py-3">
         <NavigationMenuList className="flex space-x-6">
 
           <NavigationMenuItem>
