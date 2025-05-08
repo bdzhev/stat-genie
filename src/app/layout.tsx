@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import RelicProCanonic from 'next/font/local';
 import RelicProDemotic from 'next/font/local';
-import FoliesBergereBold from 'next/font/local';
+import MulishRegular from 'next/font/local';
 import { Viewport } from "next";
 import "./globals.css";
 
@@ -26,9 +26,9 @@ const relicDemotic = RelicProDemotic({
   variable: '--font-relic-d',
 })
 
-const foliesBold= FoliesBergereBold({
-  src: '../../public/fonts/FoliesBergereBold.woff2',
-  variable: '--font-folies-bold',
+const mulishRegular= MulishRegular({
+  src: '../../public/fonts/MulishRegular.woff2',
+  variable: '--font-mulish',
 })
 
 export const metadata: Metadata = {
@@ -48,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${relicCanonic.variable} ${relicDemotic.variable} ${foliesBold.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${relicCanonic.variable} ${relicDemotic.variable} ${mulishRegular.variable} antialiased`}
       >
         {children}
       </body>

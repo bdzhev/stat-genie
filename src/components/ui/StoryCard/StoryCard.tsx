@@ -17,11 +17,11 @@ export const StoryCard = (props: StoryCardProps) => {
   });
 
   return (
-    <div className={`${cardClasses} min-h-32 rounded-sm bg-granny-smith/50 backdrop-blur-lg flex flex-col overflow-hidden px-6 py-8`}>
+    <div className={`${cardClasses} h-full flex flex-col gap-10 rounded-2xl bg-woodsmoke/50 border-lemon/5 border-1 backdrop-blur-sm flex flex-col overflow-hidden px-10 py-14`}>
       {(imagePath && imageAlt && (
         <Image src={imagePath} alt={imageAlt} width={32} height={32} />
       )) ||
-        (hasPlaceholder && <div className="bg-accent w-full h-20 rounded-sm"></div>)}
+        (hasPlaceholder && <div className="bg-accent min-h-20 max-h-60 rounded-sm"></div>)}
       <p className="text-lemon">{children}</p>
     </div>
   );

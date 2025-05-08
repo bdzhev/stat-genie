@@ -26,11 +26,11 @@ export const IconSlider = () => {
   ];
 
   return (
-    <div className="slider overflow-x-hidden max-w-screen">
-      <div className="slide-track flex-nowrap gap-20 py-10 max-w-screen">
+    <div className="slider overflow-x-hidden">
+      <div className="slide-track gap-10 flex-nowrap py-10 md:gap-20">
         {icons.map((icon, i) => (
           <div
-            className={`slide h-25 border-4 border-lavender/30 p-4 rounded-full backdrop-blur-sm text-lavender`}
+            className={`slide h-15 rounded-full backdrop-blur-sm text-lavender md:h-25 md:p-4  md:border-4 md:border-lavender/30`}
             key={i}
             style={{ animationDelay: delays[i % delays.length] }}
           >

@@ -1,11 +1,11 @@
 @import "tailwindcss";
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --font-mulish: var(--font-mulish);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-relic-can: var(--font-relic-c);
@@ -33,6 +33,7 @@
   --color-lavender: var(--lavender);
   --color-kimberly: var(--kimberly);
   --color-valhalla: var(--valhalla);
+  --color-everglade: var(--everglade);
   --color-lemon: var(--lemon);
   --color-woodsmoke: var(--woodsmoke);
   --color-deep-purple: var(--deep-purple);
@@ -75,6 +76,7 @@
   --woodsmoke: #0e0f12;
   --deep-purple: #4635B1;
   --granny-smith: #AEEA94;
+  --everglade: #1D4430;
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
@@ -143,9 +145,9 @@ html, body {
 }
 
 .gradient-anim {
-  background: linear-gradient(-45deg, var(--valhalla), var(--woodsmoke), var(--valhalla), var(--deep-purple));
+  background: linear-gradient(-45deg, var(--woodsmoke), var(--valhalla), var(--deep-purple));
 	background-size: 400% 400%;
-	animation: gradient 50s ease-in-out infinite;
+	animation: gradient 10s ease-in-out infinite;
 }
 
 @keyframes gradient {

@@ -5,13 +5,12 @@ export const TopSection = () => {
   return (
     <section
       id="top-section"
-      className="relative flex flex-col pt-10 justify-center pb-10 lg:pb-20"
+      className="relative flex flex-col pb-20 justify-center mt-30 md:mt-20 lg:pb-20"
     >
       <Background />
-      <div id="hero" className='z-50 flex flex-cols justify-center'>
-        {/* <h1 className='font-folies-b text-lemon'>sdfa</h1> */}
-        <h2 className="text-5xl mt-20 mb-14 px-4 max-w-md text-lemon font-relic-can line-clamp-4 text-center md:mb-40 md:px-10 md:text-right md:text-6xl md:px-0 md:max-w-3xl lg:mb-30 lg:max-w-6xl lg:text-7xl">
-          Simpler way to pick stats for your new adventurer
+      <div id="hero" className='z-50 flex flex-col justify-center mb-25 md:mb-40 md:px-10 lg:mb-30'>
+        <h1 className="text-5xl mx-auto text-lemon font-relic-can text-center md:mr-0 md:text-right md:text-6xl md:px-20 lg:px-40 lg:max-w-5xl lg:text-7xl lg:mx-auto">
+          StatGenie
           <span>
             {
               <Image
@@ -23,7 +22,10 @@ export const TopSection = () => {
               />
             }
           </span>
-        </h2>
+        </h1>
+        <article className='font-mulish max-w-lg mx-auto text-lavender text-center text-xl mt-2 line-clamp-2 px-20 md:text-right md:mr-0 lg:mx-auto lg:text-center'>
+          Simplified, survey-based stat generator for new TTRPG players
+        </article>
       </div>
     </section>
   );
