@@ -5,7 +5,7 @@ export const TopSection = () => {
   return (
     <section
       id="top-section"
-      className="relative flex flex-col pb-20 justify-center mt-30 md:mt-20 lg:pb-20 lg:mt-40"
+      className="relative flex flex-col pb-20 justify-center mt-30 md:mt-30 lg:pb-20 lg:mt-40"
     >
       <Background />
       <div id="hero" className='z-50 flex flex-col justify-center mb-25 md:mb-40 md:px-10 lg:mb-30'>
