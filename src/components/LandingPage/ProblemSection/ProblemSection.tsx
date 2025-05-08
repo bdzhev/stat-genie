@@ -2,7 +2,7 @@ import { StoryCard } from "@/components/ui/StoryCard/StoryCard";
 
 export const ProblemSection = () => {
   return (
-    <section className="flex-1 p-8">
+    <section className="z-50 flex-1 p-8 relative">
       <div className="grid grid-rows-4 grid-cols-2 grid-flow-dense md:grid-cols-4 lg:grid-cols-6">
         <div className="row-span-2 col-span-2">
           <StoryCard hasPlaceholder>

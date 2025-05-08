@@ -17,7 +17,7 @@ export const StoryCard = (props: StoryCardProps) => {
   });
 
   return (
-    <div className={`${cardClasses} rounded-sm bg-deep-purple flex flex-col overflow-hidden px-6 py-8`}>
+    <div className={`${cardClasses} min-h-32 rounded-sm bg-granny-smith/50 backdrop-blur-lg flex flex-col overflow-hidden px-6 py-8`}>
       {(imagePath && imageAlt && (
         <Image src={imagePath} alt={imageAlt} width={32} height={32} />
       )) ||

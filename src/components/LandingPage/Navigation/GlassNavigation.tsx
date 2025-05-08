@@ -8,8 +8,8 @@ import { NavLink } from '@/components/ui/NavLink/NavLink';
 
 export const GlassNavigation = () => {
   return (
-    <div className="sticky top-0">
-      <NavigationMenu className="rounded-4xl bg-white/5 backdrop-blur-xs px-6 py-3">
+    <div className="sticky flex flex-row justify-center top-10 z-[1000] overflow-x-hidden">
+      <NavigationMenu className="rounded-4xl bg-valhalla/80 backdrop-blur-sm px-6 py-3">
         <NavigationMenuList className="flex space-x-6">
 
           <NavigationMenuItem>

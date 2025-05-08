@@ -1,9 +1,10 @@
-import { TopSection, ProblemSection } from "@/components/LandingPage";
+import { TopSection, ProblemSection, GlassNavigation } from "@/components/LandingPage";
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen ">
-      <div id='layout' className="w-full min-h-screen flex flex-col bg-woodsmoke">
+    <main className="min-h-screen w-full gradient-anim">
+      <div id='layout' className="min-h-screen w-full flex flex-col">
+        <GlassNavigation />
         <TopSection />
         <ProblemSection />
       </div>
