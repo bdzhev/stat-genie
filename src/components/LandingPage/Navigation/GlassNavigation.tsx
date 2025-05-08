@@ -24,6 +24,10 @@ export const GlassNavigation = () => {
             <NavLink link='/contacts'>Contacts</NavLink>
           </NavigationMenuItem>
 
+          <NavigationMenuItem>
+            <NavLink link='/survey'>Survey</NavLink>
+          </NavigationMenuItem>
+
         </NavigationMenuList>
       </NavigationMenu>
     </div>

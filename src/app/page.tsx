@@ -1,4 +1,4 @@
-import { TopSection, ProblemSection, GlassNavigation } from "@/components/LandingPage";
+import { TopSection, CardsSection, GlassNavigation } from "@/components/LandingPage";
 
 export default function Home() {
   return (
@@ -6,7 +6,7 @@ export default function Home() {
       <div id='layout' className="min-h-screen w-full flex flex-col">
         <GlassNavigation />
         <TopSection />
-        <ProblemSection />
+        <CardsSection />
       </div>
     </main>
   );

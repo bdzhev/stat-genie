@@ -1,6 +1,6 @@
 import { StoryCard } from "@/components/ui/StoryCard/StoryCard";
 
-export const ProblemSection = () => {
+export const CardsSection = () => {
   return (
     <section className="z-50 flex-1 p-8 relative">
       <div className="grid gap-4 px-10 auto-rows-auto grid-cols-2 grid-flow-dense md:px-20 md:grid-cols-6 lg:px-40">
