@@ -24,7 +24,7 @@ export const StoryCard = (props: StoryCardProps) => {
   });
 
   return (
-    <div className={`${cardClasses} h-full flex flex-col gap-5 rounded-2xl bg-lemon/5 border-r-woodsmoke border-r-1 border-l-lemon/5 border-t-lemon/5 border-l-1 border-t-1 backdrop-blur-sm flex flex-col overflow-hidden px-10 py-14`}>
+    <div className={`${cardClasses} h-full flex flex-col gap-5 shadow-md shadow-valhalla rounded-2xl bg-lemon/5 border-l-lemon/5 border-t-lemon/5 border-l-1 border-t-1 backdrop-blur-sm flex flex-col overflow-hidden px-10 py-14`}>
       {(imagePath && imageAlt && (
         <Image src={imagePath} alt={imageAlt} width={32} height={32} />
       )) ||

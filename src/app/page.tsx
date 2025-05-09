@@ -1,4 +1,5 @@
-import { TopSection, CardsSection, GlassNavigation } from "@/components/LandingPage";
+import { TopSection, CardsSection } from "@/components/LandingPage";
+import { GlassNavigation } from "@/components/Navigation/GlassNavigation";
 
 export default function Home() {
   return (
