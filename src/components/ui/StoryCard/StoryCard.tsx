@@ -2,6 +2,12 @@ import { StoryCardProps } from './StoryCard.types';
 import Image from 'next/image';
 import clsx from 'clsx';
 
+const ImagePlaceholder = () => {
+  return (
+    <div className="bg-lemon/30 rounded-md min-h-20 max-h-60 min-h-40 p-2"/>
+  )
+};
+
 export const StoryCard = (props: StoryCardProps) => {
   const {
     imagePath = null,
@@ -9,6 +15,7 @@ export const StoryCard = (props: StoryCardProps) => {
     children,
     hasBorder = false,
     hasPlaceholder = false,
+    title,
   } = props;
 
   const cardClasses = clsx({
@@ -17,12 +24,15 @@ export const StoryCard = (props: StoryCardProps) => {
   });
 
   return (
-    <div className={`${cardClasses} h-full flex flex-col gap-10 rounded-2xl bg-woodsmoke/50 border-lemon/5 border-1 backdrop-blur-sm flex flex-col overflow-hidden px-10 py-14`}>
+    <div className={`${cardClasses} h-full flex flex-col gap-5 rounded-2xl bg-lemon/5 border-r-woodsmoke border-r-1 border-l-lemon/5 border-t-lemon/5 border-l-1 border-t-1 backdrop-blur-sm flex flex-col overflow-hidden px-10 py-14`}>
       {(imagePath && imageAlt && (
         <Image src={imagePath} alt={imageAlt} width={32} height={32} />
       )) ||
-        (hasPlaceholder && <div className="bg-accent min-h-20 max-h-60 rounded-sm"></div>)}
-      <p className="text-lemon">{children}</p>
+        (hasPlaceholder && <ImagePlaceholder/>)}
+      <article>
+        <h5 className="font-bold text-lemon text-xl mb-2">{title}</h5>
+        <p className="text-lemon">{children}</p>
+      </article>
     </div>
   );
 };

@@ -1,5 +1,3 @@
 export default function Page() {
-  return (
-    <p>yay</p>
-  );
+  return null;
 };
