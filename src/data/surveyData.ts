@@ -23,7 +23,11 @@ interface StepData {
   q5?: QuestionAnswers,
 }
 
-export interface GenieSurveyStepData {
+export interface GenieUserData {
+  userId: number | null,
   curStep: SurveySteps,
+}
+
+export interface GenieSurveyStepData {
   stepData: [StepData, StepData, StepData, StepData, StepData, StepData];
 }

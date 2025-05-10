@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useSessionData } from '../SessionProvider';
 
 import {
   NavigationMenu,
@@ -8,10 +8,8 @@ import {
   NavigationMenuItem,
 } from '@/components/ui/navigation-menu';
 
-import { getCurStepDataInLocalStorage } from '@/lib/actions/checkLocalStorage';
 
 import { NavLink } from '@/components/ui/NavLink/NavLink';
-import { SurveySteps } from '@/lib/data/surveyData';
 
 const navItems = [
   { label: 'Home', link: '/' },
@@ -21,12 +19,7 @@ const navItems = [
 ];
 
 export const GlassNavigation = () => {
-  const [curSurveyStep, setCurSurveyStep] = useState<SurveySteps>(0);
-
-  useEffect(() => {
-    const step = getCurStepDataInLocalStorage();
-    setCurSurveyStep(step);
-  }, []);
+  const [userId, curStep] = useSessionData();
 
   return (
     <div className="sticky flex flex-row justify-center top-10 z-[1000] overflow-x-hidden">
@@ -40,7 +33,7 @@ export const GlassNavigation = () => {
                 </NavigationMenuItem>
               );
             } else {
-              const surveyLink = `${navItems[3].link}/${curSurveyStep}`;
+              const surveyLink = `${navItems[3].link}/${curStep}/?userId=${userId}`;
               return (
                 <NavigationMenuItem key={i}>
                   <NavLink link={surveyLink}>{label}</NavLink>

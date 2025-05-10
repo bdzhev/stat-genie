@@ -4,6 +4,9 @@ import RelicProCanonic from 'next/font/local';
 import RelicProDemotic from 'next/font/local';
 import MulishRegular from 'next/font/local';
 import { Viewport } from "next";
+
+import { UserProvider } from "@/components/SessionProvider";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -50,7 +53,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${relicCanonic.variable} ${relicDemotic.variable} ${mulishRegular.variable} antialiased`}
       >
-        {children}
+        <UserProvider>
+          {children}
+        </UserProvider>
       </body>
     </html>
   );

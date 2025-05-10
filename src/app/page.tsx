@@ -8,6 +8,8 @@ export default function Home() {
         <GlassNavigation />
         <TopSection />
         <CardsSection />
+        <div className="w-full justify-center flex flex-col px-90 py-20">
+        </div>
       </div>
     </main>
   );
